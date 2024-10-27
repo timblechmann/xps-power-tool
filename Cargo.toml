@@ -1,0 +1,28 @@
+[dependencies]
+fern = {version = "0.7.0", features = ["colored"]}
+futures = "0.3.31"
+heapless = "0.8.0"
+humantime = "2.1.0"
+log = "0.4.22"
+tokio = {version = "1.41.0", features = ["signal"]}
+upower_dbus = {version = "0.3.2"}
+zbus = {version = "3.15.2", features = ["tokio"]}
+
+[package]
+edition = "2021"
+license = "GPL3"
+name = "xps-power-tool"
+version = "0.1.0"
+
+[package.metadata.deb]
+copyright = "2024, Tim Blechmann."
+default-features = false
+depends = "$auto"
+extended-description = "Setting power bias when battery powered"
+maintainer = "Tim Blechmann <tim@klingt.org>"
+maintainer-scripts = "debian/"
+priority = "optional"
+section = "utils"
+systemd-units = [
+  {unit-name = "xps-power-tool", enable = true}
+]

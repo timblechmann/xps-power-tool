@@ -1,0 +1,8 @@
+[Unit]
+Description="XPS Power Tool"
+
+[Service]
+ExecStart=/usr/bin/xps-power-tool
+
+[Install]
+WantedBy=multi-user.target
